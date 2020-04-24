@@ -1,0 +1,60 @@
+[
+  {
+    "name": "production",
+    "type": "postgres",
+    "synchronize": true,
+
+    "cache": true,
+    "logging": true,
+    "entities": ["dist/server/entity/**/*.js"],
+    "migrations": ["dist/server/migration/**/*.*"],
+    "subscribers": ["dist/server/subscriber/**/*.*"],
+    "cli": {
+      "entitiesDir": "dist/server/entity",
+      "migrationsDir": "dist/server/migration",
+      "subscribersDir": "dist/server/subscriber"
+    }
+  },
+  {
+    "name": "development",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "s1k2b3",
+    "database": "bakbak-dev",
+    "logging": true,
+    "synchronize": true,
+
+    "entities": ["src/server/entity/**/*.ts"],
+    "migrations": ["src/server/migration/**/*.ts"],
+    "subscribers": ["src/server/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/server/entity",
+      "migrationsDir": "src/server/migration",
+      "subscribersDir": "src/server/subscriber"
+    }
+  },
+  {
+    "name": "test",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "s1k2b3",
+    "database": "bakbak-test",
+    "synchronize": true,
+
+    "dropSchema": true,
+
+    "logging": false,
+    "entities": ["src/server/entity/**/*.ts"],
+    "migrations": ["src/server/migration/**/*.ts"],
+    "subscribers": ["src/server/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/server/entity",
+      "migrationsDir": "src/server/migration",
+      "subscribersDir": "src/server/subscriber"
+    }
+  }
+]
