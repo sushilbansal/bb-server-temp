@@ -31,7 +31,7 @@
     "ioredis": "^4.14.1",
     "lodash.differenceby": "^4.8.0",
     "lodash.intersectionwith": "^4.4.0",
-    "nodemailer": "^6.4.2",
+    "nodemailer": "^6.4.16",
     "pg": "^7.17.1",
     "pino": "^5.16.0",
     "pino-pretty": "^3.5.0",
